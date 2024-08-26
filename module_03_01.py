@@ -29,9 +29,14 @@ def string_info (data_in):  #принимает аргумент - строку 
     count_calls()
     return data_out
 def is_contains (data_in, data_list_in):  #ринимает два аргумента: строку и список, и возвращает True, если строка находится в этом списке, False - если отсутствует
-    data_string = str(data_in)
+    data_string = str(data_in.lower())
     data_list = list(data_list_in)
-    data_out = any(item in data_string for item in data_list)
+    data_out = False
+    for i in range(len(data_list)):
+        data_list[i] = data_list[i].lower()
+        if data_string == data_list[i]:
+            data_out = True
+#   data_out = any(item in data_string for item in data_list)
     count_calls()
     return data_out
 
