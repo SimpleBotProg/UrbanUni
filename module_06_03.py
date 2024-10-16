@@ -42,6 +42,7 @@ class Pegasus (Horse, Eagle):
     def __init__(self):
         # self.sound = super()._sound
         # self.sound = super().sound
+        Horse.__init__(self)
         Eagle.__init__(self)
 
     def move(self, dx, dy):
